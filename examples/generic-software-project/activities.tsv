@@ -1,0 +1,18 @@
+work_id	id	order	name	duration	predecessors	status
+w-req-interview-record	a-stakeholder-interview		ステークホルダーヒアリング	5		todo
+w-req-org-doc	a-req-summary		要件まとめ	4	a-stakeholder-interview	todo
+w-req-org-confirm	a-m-req-complete		要件確定	0	a-req-summary	todo
+w-design-arch-doc	a-arch-design		アーキテクチャ設計	6	a-m-req-complete	todo
+w-design-detail-be	a-be-detail		バックエンド詳細設計	5	a-arch-design	todo
+w-design-detail-fe	a-fe-detail		フロントエンド詳細設計	4	a-arch-design	todo
+w-design-detail-confirm	a-m-design-complete		設計確定	0	a-be-detail, a-fe-detail	todo
+w-impl-be-code	a-be-impl		バックエンド実装	12	a-m-design-complete	todo
+w-impl-fe-code	a-fe-impl		フロントエンド実装	10	a-m-design-complete	todo
+w-impl-integration-api	a-api-integration		API疎通確認	2	a-be-impl, a-fe-impl	todo
+w-impl-integration-confirm	a-m-impl-complete		実装完了	0	a-api-integration	todo
+w-test-int-result	a-int-test		結合テスト	8	a-m-impl-complete	todo
+w-test-uat-result	a-uat		受入テスト	5	a-int-test	todo
+w-test-uat-confirm	a-m-test-complete		テスト完了	0	a-uat	todo
+w-release-prep-plan	a-release-prep		リリース準備	3	a-m-test-complete	todo
+w-release-exec-main	a-release		本番リリース作業	1	a-release-prep	todo
+w-release-exec-confirm	a-m-release-complete		リリース完了	0	a-release	todo

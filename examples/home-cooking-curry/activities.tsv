@@ -1,0 +1,19 @@
+work_id	id	order	name	duration	predecessors	status
+w-curry-rice	a-wash-rice		米を研ぐ	5		todo
+w-curry-rice	a-cook-rice		米を炊く	40	a-wash-rice	todo
+w-curry-prep	a-cut-onion		玉ねぎを切る	5		todo
+w-curry-prep	a-cut-meat		肉を切る	5	a-cut-onion	todo
+w-curry-prep	a-cut-veg		野菜を切る	10	a-cut-meat	todo
+w-curry-cook	a-saute-onion		玉ねぎを炒める	10	a-cut-onion	todo
+w-curry-cook	a-saute-meat		肉を炒める	5	a-saute-onion, a-cut-meat	todo
+w-curry-cook	a-simmer-veg		野菜を煮込む	15	a-saute-meat, a-cut-veg	todo
+w-curry-cook	a-curry-roux		ルーを溶かす	5	a-simmer-veg	todo
+w-curry-cook	a-final-simmer		仕上げ煮込み	10	a-curry-roux	todo
+w-lassi	a-mix-lassi		ラッシーを混ぜる	5		todo
+w-lassi	a-chill-lassi		ラッシーを冷やす	15	a-mix-lassi	todo
+w-meal	a-serve		配膳	5	a-cook-rice, a-final-simmer, a-chill-lassi	todo
+w-meal	a-eat		食事	30	a-serve	todo
+w-cleanup	a-clear		食器を下げる	5	a-eat	todo
+w-cleanup	a-wash-dishes		食器を洗う	15	a-clear	todo
+w-cleanup	a-dry-store		拭いてしまう	10	a-wash-dishes	todo
+w-cleanup	a-m-done		ごちそうさま	0	a-dry-store	todo

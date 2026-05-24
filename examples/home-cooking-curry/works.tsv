@@ -1,0 +1,8 @@
+id	parent_id	order	name
+w-curry			カレー
+w-curry-rice	w-curry		ごはん
+w-curry-prep	w-curry		具材準備
+w-curry-cook	w-curry		調理
+w-lassi			ラッシー
+w-meal			食事
+w-cleanup			片付け

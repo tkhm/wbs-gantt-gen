@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wbsgen"
+version = "0.2.0"
+description = "PMBOK-aligned WBS and Gantt chart generator (CPM, TSV source)"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "tkhm" }]
+dependencies = [
+    "jpholiday>=0.1.10",
+    "watchfiles>=0.21",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.scripts]
+wbsgen = "wbsgen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

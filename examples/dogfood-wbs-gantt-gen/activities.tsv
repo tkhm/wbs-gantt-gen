@@ -1,0 +1,19 @@
+work_id	id	order	name	duration	predecessors	status
+w-setup-base	a-pyproject		pyproject / ディレクトリ構成	1		done
+w-engine-data	a-model		model.py (Work/Activity 分離)	1	a-pyproject	done
+w-engine-data	a-ids		ids.py (slug + 衝突回避)	1	a-model	done
+w-engine-data	a-deps-dsl		deps_dsl.py	1	a-ids	done
+w-engine-data	a-loader		loader.py (TSV)	2	a-deps-dsl	done
+w-engine-data	a-validator		validator.py	1	a-loader	done
+w-engine-sched	a-bizcal		bizcal.py (営業日カレンダー)	1	a-pyproject	done
+w-engine-sched	a-scheduler		scheduler.py (CPM)	2	a-loader, a-bizcal	done
+w-engine-sched	a-m-engine		エンジン完成	0	a-validator, a-scheduler	done
+w-render-md	a-render-md		render/markdown.py	2	a-m-engine	done
+w-render-vis	a-render-mermaid		render/mermaid.py (単一ガント)	2	a-render-md	done
+w-render-vis	a-render-pyramid		render/pyramid.py	1	a-m-engine	done
+w-render-vis	a-render-pert		render/pert.py	1	a-m-engine	done
+w-cli-cmd	a-cli		cli.py (build/check/init + --watch)	2	a-render-md, a-render-mermaid, a-render-pyramid, a-render-pert	doing
+w-finish-ex	a-examples		examples 整備 (TSV)	1	a-cli	todo
+w-finish-test	a-tests		pytest 一式	2	a-cli	todo
+w-finish-doc	a-docs		README / CLAUDE.md	1	a-tests	todo
+w-finish-doc	a-m-mvp		v2 MVP 完成	0	a-examples, a-tests, a-docs	todo

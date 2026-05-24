@@ -1,0 +1,15 @@
+id	parent_id	order	name
+w-setup			セットアップ
+w-setup-base	w-setup		基盤整備
+w-engine			コアエンジン
+w-engine-data	w-engine		データモデル
+w-engine-sched	w-engine		スケジューリング
+w-render			レンダリング
+w-render-md	w-render		Markdown 統合
+w-render-vis	w-render		図表（Mermaid）
+w-cli			CLI
+w-cli-cmd	w-cli		コマンド
+w-finish			検証と仕上げ
+w-finish-ex	w-finish		サンプル整備
+w-finish-test	w-finish		テスト
+w-finish-doc	w-finish		ドキュメント

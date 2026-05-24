@@ -1,0 +1,34 @@
+id	parent_id	order	name
+w-req			要件定義
+w-req-interview	w-req		ヒアリング
+w-req-interview-record	w-req-interview		ヒアリング報告
+w-req-org	w-req		要件整理
+w-req-org-doc	w-req-org		要件定義書
+w-req-org-confirm	w-req-org		要件承認
+w-design			設計
+w-design-arch	w-design		アーキ設計
+w-design-arch-doc	w-design-arch		アーキ設計書
+w-design-detail	w-design		詳細設計
+w-design-detail-be	w-design-detail		バックエンド詳細設計書
+w-design-detail-fe	w-design-detail		フロントエンド詳細設計書
+w-design-detail-confirm	w-design-detail		設計承認
+w-impl			実装
+w-impl-be	w-impl		バックエンド
+w-impl-be-code	w-impl-be		バックエンド実装
+w-impl-fe	w-impl		フロントエンド
+w-impl-fe-code	w-impl-fe		フロントエンド実装
+w-impl-integration	w-impl		結合
+w-impl-integration-api	w-impl-integration		API疎通
+w-impl-integration-confirm	w-impl-integration		実装完了承認
+w-test			テスト
+w-test-int	w-test		結合テスト
+w-test-int-result	w-test-int		結合テスト結果
+w-test-uat	w-test		受入テスト
+w-test-uat-result	w-test-uat		受入テスト結果
+w-test-uat-confirm	w-test-uat		テスト承認
+w-release			リリース
+w-release-prep	w-release		準備
+w-release-prep-plan	w-release-prep		リリース計画書
+w-release-exec	w-release		実施
+w-release-exec-main	w-release-exec		本番リリース
+w-release-exec-confirm	w-release-exec		リリース完了承認

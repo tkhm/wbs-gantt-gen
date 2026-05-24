@@ -1,0 +1,17 @@
+[project]
+name = "カレー・ラッシー晩ごはん"
+description = """
+依存関係の複雑な例。並行作業（米炊き／具材準備／ラッシー）が複数走り、
+合流点（配膳）で揃ったあと食事 → 片付けへ進む。FS／SS の典型例。
+
+**注**: 実際の所要は約2時間。ツールは整数 duration を「営業日」として
+扱う仕様のため、ガントの日付軸は「分→日」に読み替えたものとなる。
+あくまで並行関係と依存関係の見え方を確認するためのサンプル。
+"""
+start = 2026-06-01
+units = "business_days"
+near_critical_threshold = 5
+
+[project.calendar]
+working_days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+holidays_preset = "none"

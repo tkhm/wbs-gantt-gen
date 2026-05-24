@@ -1,0 +1,10 @@
+[project]
+name = "新サービス α リリース"
+description = "ソフトウェア開発の典型的な計画（要件・設計・実装・テスト・リリース）"
+start = 2026-06-01
+units = "business_days"
+near_critical_threshold = 2
+
+[project.calendar]
+working_days = ["mon", "tue", "wed", "thu", "fri"]
+holidays_preset = "jp"

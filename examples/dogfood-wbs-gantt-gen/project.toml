@@ -1,0 +1,10 @@
+[project]
+name = "wbsgen v2 開発"
+description = "本ツール wbsgen v2 (TSV ベース) の開発計画。ドッグフーディング用。"
+start = 2026-05-25
+units = "business_days"
+near_critical_threshold = 2
+
+[project.calendar]
+working_days = ["mon", "tue", "wed", "thu", "fri"]
+holidays_preset = "jp"
